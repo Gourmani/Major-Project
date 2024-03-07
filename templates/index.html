@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="loader" style="display:none;"></div>
+
+
+<div>
+    <section>
+        <p> Welcome to our Deepfake Image Detector! We aim to provide a tool that helps users identify whether an
+            image is real or fake using advanced AI techniques. Our commitment is to contribute to the fight
+            against misinformation and fake content.</p>
+    </section>
+
+
+    <h2>Provide the Input Image</h2>
+
+    <div>
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="upload-label">
+                Choose...
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+
+        <div class="image-section" style="display:none;">
+            <div class="img-preview">
+                <div id="imagePreview">
+                </div>
+            </div>
+            <div>
+                <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+            </div>
+        </div>
+        <section>
+            <h3 id="result">
+                <span> </span>
+            </h3>
+            <p>Our project addresses the increasing concern of image security in today's digital environment,
+                particularly in industries like healthcare and surveillance. Unauthorized access and manipulation of
+                images pose serious risks, leading to potential errors in medical diagnoses and undermining public
+                safety. Conventional protection techniques often fall short, necessitating cutting-edge tactics to close
+                gaps and prevent misinformation. Our focus is on developing robust image security measures using
+                innovative technologies such as blockchain integration and artificial intelligence algorithms. By
+                ensuring the authenticity of visual information, we aim to foster a digital environment where trust,
+                reliability, and societal stability are paramount, contributing to a global ecosystem of transparency
+                and innovation.</p>
+        </section>
+        <section>
+            <h1>Objectives</h1>
+            <p>The project objectives are to implement deep learning models like CNN and transfer learning for
+                distinguishing real from fake images, analyze their performance using metrics such as accuracy,
+                precision, recall, and F1 score, and conduct a comparative analysis of these models.</p>
+        </section>
+    </div>
+
+</div>
+
+{% endblock %}
